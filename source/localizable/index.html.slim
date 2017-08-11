@@ -1,1 +1,9 @@
-h1 = t 'title'
+.left
+  = image_tag "logo.svg"
+  .dash
+  h1 = t 'title'
+  p.subtitle = t 'subtitle'
+  = partial "shared/form.html"
+  p.footer = t 'credits'
+  
+.right

@@ -7,7 +7,7 @@ en:
     title: 👩🏻‍💻 One Tag a Day 👨🏾‍💻
     tag:
       title: progress
-      definition: Defines a <strong>progress bar.</strong>
+      definition: Defines a <span style="font-weight:700;font-size:14px;color:black;">progress bar.</span>
       type: "Type: Block"
       self-closing: "Self-closing: No"
       permalink: Permalink

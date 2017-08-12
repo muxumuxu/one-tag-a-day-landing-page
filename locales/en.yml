@@ -2,3 +2,27 @@ en:
   title: Discover, learn, repeat.
   subtitle: Did you know about &lt;kbd&gt;? Sign up and discover a new HTML tag each day.
   credits: _ made with love by <a href="https://www.muxumuxu.com">Muxu.Muxu</a> x <a href="https://twitter.com/jgthms">Jeremy Thomas</a>
+
+  newsletter:
+    title: 👩🏻‍💻 One Tag a Day 👨🏾‍💻
+    tag:
+      title: progress
+      definition: Defines a <strong>progress bar.</strong>
+      type: "Type: Block"
+      self-closing: "Self-closing: No"
+      permalink: Permalink
+      share: Share
+      caniuse: Can I use
+      mdn: MDN
+    example:
+      title: Example
+      code: "&lt;progress&gt;Progress&lt;/progress&gt;"
+    value:
+      title: Value
+      description: Defines the value of the progress bar, on the scale defined by the max attribute.
+      required: Required.
+    number:
+      title: "0.7"
+      description: You can use decimal and negative numbers. It must be between the min and max values.
+
+  one-tag-a-day: One Tag a Day

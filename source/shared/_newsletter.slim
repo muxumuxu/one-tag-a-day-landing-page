@@ -15,10 +15,13 @@
     span.info = t 'newsletter.tag.mdn'
   .example 
     h4 = t 'newsletter.example.title'
-    .progress-bar
-      .blue
-      .grey
-    p.code = t 'newsletter.example.code'
+    progress value="0.7"
+    .code
+      span.pink = "&lt;progress "
+      span.green = "value=&quot;0.7&quot;"
+      span.pink = "&gt;"
+      span.white = "Progress"
+      span.pink = "&lt;/progress&gt;"
   .value
     h5 = t 'newsletter.value.title'
     p.value-description = t 'newsletter.value.description'

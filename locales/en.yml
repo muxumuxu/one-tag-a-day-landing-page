@@ -16,7 +16,6 @@ en:
       mdn: MDN
     example:
       title: Example
-      code: "&lt;progress&gt;Progress&lt;/progress&gt;"
     value:
       title: Value
       description: Defines the value of the progress bar, on the scale defined by the max attribute.

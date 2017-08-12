@@ -1,6 +1,6 @@
 en:
   title: Discover, learn, repeat.
-  subtitle: Did you know about <span style="color:#F92672;">&lt;kbd&gt;</span>? Sign up and discover a new HTML tag each day.
+  subtitle: Did you know about <a href="http://htmlreference.io/element/kbd/" style="color:#F92672;" target="_blank">&lt;kbd&gt;</a>? Sign up and discover a new HTML tag each day.
   credits: _ made with love by <a href="https://www.muxumuxu.com" target="_blank">Muxu.Muxu</a> x <a href="https://twitter.com/jgthms" target="_blank">Jeremy Thomas</a>
 
   newsletter:

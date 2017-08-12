@@ -6,18 +6,10 @@
       h1 = t 'title'
       p.subtitle = t 'subtitle'
       = partial "shared/form.html"
-      p.footer = t 'credits'
       
     .right
       = partial "shared/newsletter.slim"
       span.baseline = t 'one-tag-a-day'
     
-.mobile
-  .left
-    = image_tag "logo.svg"
-    .dash
-    h1 = t 'title'
-    p.subtitle = t 'subtitle'
-    = partial "shared/form.html"
-    = partial "shared/newsletter.slim"
     p.footer = t 'credits'
+  

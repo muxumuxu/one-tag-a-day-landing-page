@@ -21,7 +21,7 @@ en:
       description: Defines the value of the progress bar, on the scale defined by the max attribute.
       required: Required.
     number:
-      title: "0.7"
+      title: "&quot;0.7&quot;"
       description: You can use decimal and negative numbers. It must be between the min and max values.
 
   one-tag-a-day: One Tag a Day

@@ -7,12 +7,12 @@
   .tag 
     h3 = t 'newsletter.tag.title'
     p.definition = t 'newsletter.tag.definition'
-    span.info = t 'newsletter.tag.type'
-    span.info = t 'newsletter.tag.self-closing'
-    span.info = t 'newsletter.tag.permalink'
-    span.info = t 'newsletter.tag.share'
-    span.info = t 'newsletter.tag.caniuse'
-    span.info = t 'newsletter.tag.mdn'
+    span.info.block = t 'newsletter.tag.type'
+    span.info.block = t 'newsletter.tag.self-closing'
+    span.info.block = t 'newsletter.tag.permalink'
+    span.info.block = t 'newsletter.tag.share'
+    span.info.block = t 'newsletter.tag.caniuse'
+    span.info.block = t 'newsletter.tag.mdn'
   .example 
     h4 = t 'newsletter.example.title'
     progress value="0.7"
@@ -21,7 +21,7 @@
       span.green = "value=&quot;0.7&quot;"
       span.pink = "&gt;"
       span.white = "Progress"
-      span.pink = "&lt;/progress&gt;"
+      span.pink.block = "&lt;/progress&gt;"
   .value
     h5 = t 'newsletter.value.title'
     p.value-description = t 'newsletter.value.description'

@@ -1,40 +1,23 @@
-.flex
+.desktop
+  .flex
+    .left
+      = image_tag "logo.svg"
+      .dash
+      h1 = t 'title'
+      p.subtitle = t 'subtitle'
+      = partial "shared/form.html"
+      p.footer = t 'credits'
+      
+    .right
+      = partial "shared/newsletter.slim"
+      span.baseline = t 'one-tag-a-day'
+    
+.mobile
   .left
     = image_tag "logo.svg"
     .dash
     h1 = t 'title'
     p.subtitle = t 'subtitle'
     = partial "shared/form.html"
+    = partial "shared/newsletter.slim"
     p.footer = t 'credits'
-    
-  .right
-    .newsletter
-      .dots
-        .dot.red
-        .dot.yellow
-        .dot.green
-      h2 = t 'newsletter.title'
-      .tag 
-        h3 = t 'newsletter.tag.title'
-        p.definition = t 'newsletter.tag.definition'
-        span.info = t 'newsletter.tag.type'
-        span.info = t 'newsletter.tag.self-closing'
-        span.info = t 'newsletter.tag.permalink'
-        span.info = t 'newsletter.tag.share'
-        span.info = t 'newsletter.tag.caniuse'
-        span.info = t 'newsletter.tag.mdn'
-      .example 
-        h4 = t 'newsletter.example.title'
-        .progress-bar
-          .blue
-          .grey
-        p.code = t 'newsletter.example.code'
-      .value
-        h5 = t 'newsletter.value.title'
-        p.value-description = t 'newsletter.value.description'
-        span = t "newsletter.value.required"
-      .number 
-        h6 = t 'newsletter.number.title'
-        p.number-description = t 'newsletter.number.description'
-    span.baseline = t 'one-tag-a-day'
-    

@@ -4,7 +4,7 @@ en:
   credits: _ made with love by <a href="https://www.muxumuxu.com" target="_blank">Muxu.Muxu</a> x <a href="https://twitter.com/jgthms" target="_blank">Jeremy Thomas</a>
 
   newsletter:
-    title: 👩🏻‍💻 One Tag a Day 👨🏾‍💻
+    title: 👩🏻‍💻 One Tag A Day 👨🏾‍💻
     tag:
       title: progress
       definition: Defines a <span style="font-weight:700;font-size:14px;color:black;">progress bar.</span>
@@ -24,4 +24,4 @@ en:
       title: "&quot;0.7&quot;"
       description: You can use decimal and negative numbers. It must be between the min and max values.
 
-  one-tag-a-day: One Tag a Day
+  one-tag-a-day: One Tag A Day

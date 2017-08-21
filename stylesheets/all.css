@@ -167,26 +167,29 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding-top: 60px; }
+  padding-top: 40px; }
 
 input {
   font-family: "Roboto Mono", monospace;
   border-radius: 4px;
-  font-size: 30px; }
+  font-size: 22px; }
 
 input[type=email] {
   width: 240px;
-  border: 2px solid #11C651;
+  border: 2px solid #444;
   background-color: #1A1A1A;
-  padding: 25px 28px;
+  padding: 12px 16px;
   margin-right: 10px;
   color: white; }
+  input[type=email]:focus {
+    border: 2px solid #11C651; }
 
 input[type=submit] {
   border: 0;
   background-color: #11C651;
   color: white;
-  padding: 25px 40px 29px;
+  padding: 12px 20px 12px;
+  border: 2px solid #11C651;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
   input[type=submit]:hover {

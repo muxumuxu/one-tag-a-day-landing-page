@@ -60,11 +60,12 @@ p.subtitle {
   p.subtitle a:hover {
     border-bottom: 2px solid #F92672; }
 p.footer {
+  animation: 1.5s fade-footer ease-in forwards 2.2s;
   font-family: "Roboto Mono", monospace;
   color: white;
   font-size: 16px;
   letter-spacing: -1px;
-  opacity: 0.5;
+  opacity: 0;
   position: fixed;
   bottom: 80px;
   left: 80px; }
@@ -114,6 +115,30 @@ a {
     background: #1A1A1A url(../images/background-tag.svg) no-repeat 75px -100px; }
   100% {
     background: #1A1A1A url(../images/background-tag.svg) no-repeat 75px -5000px; } }
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+@keyframes fade-footer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+@keyframes fade-newsletter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes fade-list {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 #mc_embed_signup_scroll {
   display: inline-flex;
   padding-top: 40px; }
@@ -180,23 +205,53 @@ progress[value]::-webkit-progress-value {
 
 .left {
   width: 520px;
-  background: #1A1A1A no-repeat 75px -100px;
+  background: #1A1A1A;
+  animation: 100s list-animation linear infinite;
   padding: 80px;
-  position: relative;
-  animation: 100s list-animation linear infinite; }
-  .left .dash {
-    background-color: white;
-    width: 30px;
-    height: 7px;
+  position: relative; }
+  .left::after {
+    animation: 1s fade-list ease-in forwards 3s;
+    width: 680px;
+    background: #1A1A1A;
+    display: block;
+    height: 100%;
+    content: "";
     position: absolute;
-    left: 35px;
-    top: 266px; }
+    left: 0;
+    top: 0; }
+  .left .content {
+    opacity: 1;
+    position: relative;
+    z-index: 99999; }
+    .left .content img {
+      opacity: 0;
+      animation: 0.8s fade ease-in forwards 0.5s; }
+    .left .content h1, .left .content .dash {
+      opacity: 0;
+      animation: 0.7s fade ease-in forwards 1s; }
+    .left .content .subtitle {
+      opacity: 0;
+      animation: 0.4s fade ease-in forwards 1.5s; }
+    .left .content #mc_embed_signup {
+      opacity: 0;
+      animation: 0.3s fade ease-in forwards 1.7s; }
+    .left .content .dash {
+      background-color: white;
+      width: 30px;
+      height: 7px;
+      position: absolute;
+      left: -45px;
+      top: 186px; }
 
 .right {
   background: #F8F8F8;
-  flex-grow: 1; }
+  flex-grow: 1;
+  overflow: hidden; }
 
 .newsletter {
+  animation: 0.6s fade-newsletter ease-in forwards 2.4s;
+  transform-origin: center center;
+  opacity: 0;
   width: 420px;
   border-radius: 6px;
   margin: 80px auto 0;
@@ -245,11 +300,15 @@ progress[value]::-webkit-progress-value {
 
 @media screen and (max-width: 1220px) {
   body {
-    animation: 100s list-animation linear infinite; }
+    background: #1A1A1A;
+    animation: none;
+    height: 100%; }
 
   p.footer {
     padding-top: 40px;
-    line-height: 21px; }
+    line-height: 21px;
+    animation: none;
+    opacity: 1; }
 
   .flex {
     display: block; }
@@ -258,21 +317,38 @@ progress[value]::-webkit-progress-value {
       padding: 60px;
       animation: none;
       background: transparent; }
-      .flex .left .dash {
-        top: 245px;
-        left: 18px; }
+      .flex .left::after {
+        display: none; }
+      .flex .left .content img {
+        opacity: 1;
+        animation: none; }
+      .flex .left .content h1, .flex .left .content .dash {
+        opacity: 1;
+        animation: none; }
+      .flex .left .content .subtitle {
+        opacity: 1;
+        animation: none; }
+      .flex .left .content .dash {
+        top: 184px;
+        left: -42px; }
+      .flex .left .content #mc_embed_signup {
+        opacity: 1;
+        animation: none; }
     .flex .right {
       background: transparent;
       padding: 0 60px; }
       .flex .right .newsletter {
         margin: 20px 0 60px; }
+    .flex .newsletter {
+      opacity: 1;
+      animation: none; }
     .flex .footer {
       position: relative;
       left: 60px;
       width: calc(100% - 120px);
       margin-bottom: 40px; } }
 @media screen and (max-width: 800px) {
-  #mc_embed_signup_scroll {
+  #mc_embed_signup {
     display: block; }
 
   input[type=email] {

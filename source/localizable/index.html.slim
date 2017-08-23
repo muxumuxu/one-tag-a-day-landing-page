@@ -1,11 +1,12 @@
 .desktop
   .flex
     .left
-      = image_tag "logo.svg"
-      .dash
-      h1 = t 'title'
-      p.subtitle = t 'subtitle'
-      = partial "shared/form.html"
+      .content
+        = image_tag "logo.svg"
+        .dash
+        h1 = t 'title'
+        p.subtitle = t 'subtitle'
+        = partial "shared/form.html"
       
     .right
       = partial "shared/newsletter.slim"

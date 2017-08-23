@@ -61,11 +61,12 @@ p
     a:hover
       border-bottom: 2px solid #F92672
   &.footer
+    animation: 1.5s fade-footer ease-in forwards 2.2s
     font-family: 'Roboto Mono', monospace
     color: white
     font-size: 16px
     letter-spacing: -1px
-    opacity: 0.5
+    opacity: 0
     position: fixed
     bottom: 80px
     left: 80px
@@ -116,6 +117,34 @@ a
     background: #1A1A1A url(../images/background-tag.svg) no-repeat 75px -100px
   100%
     background: #1A1A1A url(../images/background-tag.svg) no-repeat 75px -5000px
+
+@keyframes fade
+  0%
+    opacity: 0
+    transform: translateY(40px)
+  100%
+    opacity: 1
+    transform: translateY(0px)
+
+@keyframes fade-footer
+  0%
+    opacity: 0
+  100%
+    opacity: .5
+
+@keyframes fade-newsletter
+  0%
+    opacity: 0
+    transform: scale(.8)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes fade-list
+  0%
+    opacity: 1
+  100%
+    opacity: 0
 
 #mc_embed_signup_scroll
   display: inline-flex
@@ -183,24 +212,54 @@ progress[value]::-webkit-progress-value
 
 .left
   width: 520px
-  background: #1A1A1A no-repeat 75px -100px
+  background: #1A1A1A
+  animation: 100s list-animation linear infinite
   padding: 80px
   position: relative
-  animation: 100s list-animation linear infinite
-  .dash
-    background-color: white
-    width: 30px
-    height: 7px
+  &::after
+    animation: 1s fade-list ease-in forwards 3s
+    width: 680px
+    background: #1A1A1A
+    display: block
+    height: 100%
+    content: ""
     position: absolute
-    left: 35px
-    top: 266px
+    left: 0
+    top: 0
+  .content
+    opacity: 1
+    position: relative
+    z-index: 99999
+    img
+      opacity: 0
+      animation: .8s fade ease-in forwards .5s
+    h1, .dash
+      opacity: 0
+      animation: .7s fade ease-in forwards 1s
+    .subtitle
+      opacity: 0
+      animation: .4s fade ease-in forwards 1.5s
+    #mc_embed_signup
+      opacity: 0
+      animation: .3s fade ease-in forwards 1.7s
+    .dash
+      background-color: white
+      width: 30px
+      height: 7px
+      position: absolute
+      left: -45px
+      top: 186px
 
 
 .right
   background: #F8F8F8
   flex-grow: 1
+  overflow: hidden
 
 .newsletter
+  animation: .6s fade-newsletter ease-in forwards 2.4s
+  transform-origin: center center
+  opacity: 0
   width: 420px
   border-radius: 6px
   margin: 80px auto 0
@@ -250,11 +309,15 @@ progress[value]::-webkit-progress-value
 
 @media screen and (max-width: 1220px)
   body
-    animation: 100s list-animation linear infinite
+    background: #1A1A1A
+    animation: none
+    height: 100%
   p
     &.footer
       padding-top: 40px
       line-height: 21px
+      animation: none
+      opacity: 1
   .flex
     display: block
     .left
@@ -262,14 +325,32 @@ progress[value]::-webkit-progress-value
       padding: 60px
       animation: none
       background: transparent
-      .dash
-        top: 245px
-        left: 18px
+      &::after
+        display: none
+      .content
+        img
+          opacity: 1
+          animation: none
+        h1, .dash
+          opacity: 1
+          animation: none
+        .subtitle
+          opacity: 1
+          animation: none
+        .dash
+          top: 184px
+          left: -42px
+        #mc_embed_signup
+          opacity: 1
+          animation: none
     .right
       background: transparent
       padding: 0 60px
       .newsletter
         margin: 20px 0 60px
+    .newsletter
+      opacity: 1
+      animation: none
     .footer
       position: relative
       left: 60px
@@ -277,7 +358,7 @@ progress[value]::-webkit-progress-value
       margin-bottom: 40px
 
 @media screen and (max-width: 800px)
-  #mc_embed_signup_scroll
+  #mc_embed_signup
     display: block
   input[type=email]
     width: 100%
